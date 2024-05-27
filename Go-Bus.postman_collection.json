@@ -1,0 +1,449 @@
+{
+	"info": {
+		"_postman_id": "c5107843-47f7-44c1-86ec-6e4417703ebf",
+		"name": "Go-Bus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27161070"
+	},
+	"item": [
+		{
+			"name": "Add Ride",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Example Ride 2\",\r\n  \"description\": \"This is a sa;lkf;adkg;akfl;alkfscription.\",\r\n  \"from\": \"Starting Point 2\",\r\n  \"to\": \"Destination Point 2\",\r\n  \"price\": 233,\r\n  \"seats\": 4390,\r\n  \"date\": \"2024-05-06\",\r\n  \"time\": \"08:00 AM\",\r\n  \"driver\": \"asslafkfkmasklfmlak3223\",\r\n  \"type\": \"taxi\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/rides",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rides"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Rides",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjM1NDRkMzg1YTIxODQ0ZjAxZTU3MmQiLCJ1c2VybmFtZSI6ImFtbWFyMSIsImVtYWlsIjoiYTRAZ20uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MTQ3NjcxMTAsImV4cCI6MTcxNDg1MzUxMH0.ReQvXoqTh9baYvTT46my2KazZZ0HKzDCItfcNvYy_lI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/rides/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rides",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Ride",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/rides/66350944d0cbc81c6b06fb9d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rides",
+						"66350944d0cbc81c6b06fb9d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Ride",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/rides/66350944d0cbc81c6b06fb9d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rides",
+						"66350944d0cbc81c6b06fb9d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Ride",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"tripppp testt\",\r\n  \"description\": \"Thafaslflksakadkg;akfl;alkfscription.\",\r\n  \"from\": \"Starting Point 2\",\r\n  \"to\": \"Destination Point 2\",\r\n  \"price\": 233,\r\n  \"seats\": 4390,\r\n  \"date\": \"2024-05-06\",\r\n  \"time\": \"08:00 AM\",\r\n  \"driver\": \"asslafkfkmasklfmlak3223\",\r\n  \"type\": \"taxi\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/rides/6635090cd0cbc81c6b06fb9b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rides",
+						"6635090cd0cbc81c6b06fb9b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Book Ride",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjM1NDRkMzg1YTIxODQ0ZjAxZTU3MmQiLCJ1c2VybmFtZSI6ImFtbWFyMSIsImVtYWlsIjoiYTRAZ20uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MTQ3NjcxMTAsImV4cCI6MTcxNDg1MzUxMH0.ReQvXoqTh9baYvTT46my2KazZZ0HKzDCItfcNvYy_lI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/rides/6635090cd0cbc81c6b06fb9b/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rides",
+						"6635090cd0cbc81c6b06fb9b",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"ammar1\",\r\n    \"email\":\"a4@gm.com\",\r\n    \"password\":\"123\",\r\n    \"role\":\"user\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"a4@gm.com\",\r\n    \"password\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjM1NDRkMzg1YTIxODQ0ZjAxZTU3MmQiLCJ1c2VybmFtZSI6ImFtbWFyMSIsImVtYWlsIjoiYTRAZ20uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MTQ3NjcxMTAsImV4cCI6MTcxNDg1MzUxMH0.ReQvXoqTh9baYvTT46my2KazZZ0HKzDCItfcNvYy_lI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/rides/search?from=Starting Point 2&to=Destination Point 2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rides",
+						"search"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "Starting Point 2"
+						},
+						{
+							"key": "to",
+							"value": "Destination Point 2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel Ride",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjM1NDRkMzg1YTIxODQ0ZjAxZTU3MmQiLCJ1c2VybmFtZSI6ImFtbWFyMSIsImVtYWlsIjoiYTRAZ20uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MTQ3NjcxMTAsImV4cCI6MTcxNDg1MzUxMH0.ReQvXoqTh9baYvTT46my2KazZZ0HKzDCItfcNvYy_lI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/rides/6635090cd0cbc81c6b06fb9b/cancel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rides",
+						"6635090cd0cbc81c6b06fb9b",
+						"cancel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjM1NDRkMzg1YTIxODQ0ZjAxZTU3MmQiLCJ1c2VybmFtZSI6ImFtbWFyMSIsImVtYWlsIjoiYTRAZ20uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MTQ3NjcxMTAsImV4cCI6MTcxNDg1MzUxMH0.ReQvXoqTh9baYvTT46my2KazZZ0HKzDCItfcNvYy_lI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get One User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjM1NDRkMzg1YTIxODQ0ZjAxZTU3MmQiLCJ1c2VybmFtZSI6ImFtbWFyMSIsImVtYWlsIjoiYTRAZ20uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MTQ3NjcxMTAsImV4cCI6MTcxNDg1MzUxMH0.ReQvXoqTh9baYvTT46my2KazZZ0HKzDCItfcNvYy_lI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users/6635444fa3ed9d90fdff9a1a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"6635444fa3ed9d90fdff9a1a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjM1NDRkMzg1YTIxODQ0ZjAxZTU3MmQiLCJ1c2VybmFtZSI6ImFtbWFyMSIsImVtYWlsIjoiYTRAZ20uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MTQ3NjcxMTAsImV4cCI6MTcxNDg1MzUxMH0.ReQvXoqTh9baYvTT46my2KazZZ0HKzDCItfcNvYy_lI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"ammarweifiuhajkfhdkj\",\r\n    \"email\": \"a4a@gm.com\",\r\n    \"role\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/6635444fa3ed9d90fdff9a1a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"6635444fa3ed9d90fdff9a1a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjM1NDRkMzg1YTIxODQ0ZjAxZTU3MmQiLCJ1c2VybmFtZSI6ImFtbWFyMSIsImVtYWlsIjoiYTRAZ20uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MTQ3NjcxMTAsImV4cCI6MTcxNDg1MzUxMH0.ReQvXoqTh9baYvTT46my2KazZZ0HKzDCItfcNvYy_lI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users/6635444fa3ed9d90fdff9a1a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"6635444fa3ed9d90fdff9a1a"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
